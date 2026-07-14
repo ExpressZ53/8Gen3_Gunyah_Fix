@@ -3,7 +3,7 @@ set -euo pipefail
 
 MODULE_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 
-abk_require_env KERNEL_ROOT CUSTOM_EXTERNAL_MODULE_STAGE
+abk_require_env KERNEL_ROOT
 
 cd ${KERNEL_ROOT}/drivers/virt/gunyah
 
