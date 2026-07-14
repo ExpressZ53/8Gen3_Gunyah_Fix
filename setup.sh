@@ -5,7 +5,8 @@ MODULE_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 
 cd "${KERNEL_ROOT}/common/drivers/virt/gunyah"
 
-patch -p0 < "${MODULE_DIR}/patches/*.patch"
+patch -p0 < "${MODULE_DIR}/patches/vm_mgr_mm.patch"
+patch -p0 < "${MODULE_DIR}/patches/gunyah_qcom.patch"
 
 if [ $? == 0 ];then
 echo "Patched Successfully!"
